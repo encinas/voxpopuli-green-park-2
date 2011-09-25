@@ -4,6 +4,9 @@
 // Language files loading
 function theme_init(){
 	load_theme_textdomain('default', get_template_directory() . '/languages');
+	
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menu( 'primary', __( 'Primary Menu', 'voxpopuli' ) );
 }
 add_action ('init', 'theme_init');
 
@@ -39,16 +42,6 @@ if ( function_exists('register_sidebar') ) {
     'name' => '4'
   ));
 }
-
-
-
-// Generates the menu
-function greenpark_globalnav() {
-	if ( $menu = str_replace( array( "\r", "\n", "\t" ), '', wp_list_pages('title_li=&echo=0&depth=1') ) )
-	echo apply_filters( 'globalnav_menu', $menu );
-}
-
-
 
 // http://sivel.net/2008/10/wp-27-comment-separation/
 function list_pings($comment, $args, $depth) {

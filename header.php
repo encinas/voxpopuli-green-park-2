@@ -52,26 +52,21 @@ if (top.location != self.location) top.location = self.location;
 		<div id="nav-search">
 			<?php get_search_form(); ?>
 		</div>
-		<ul id="menu">
-  		<li class="page-item-home <?php if ( is_home() ) { ?> current_page_item <?php } ?>"><a href="<?php echo get_option('home'); ?>/"><?php _e('Home', 'default'); ?></a></li>
-  		<?php greenpark_globalnav() ?>
-		</ul>
-    <div id="submenu-bg">    
-      <?php if ( !is_search() && !is_404() ) {
+		<ul id="menu"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?></ul>
+        <div id="submenu-bg">    
+          <?php if ( !is_search() && !is_404() ) {
     		if($post->post_parent)
     		$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
     		else
     		$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
     		if ($children) {
     		  echo "<ul id=\"submenu\">";
-          echo $children;
-          echo "</ul>";
-  		  }
-      } ?>
-    </div>
-	</div>
-
-</div>
-
+              echo $children;
+              echo "</ul>";
+  		    }
+          } ?>
+        </div><!-- end of submenu-bg -->
+	</div><!-- end of nav -->
+</div> <!-- end of header -->
 
 <div id="main" class="clearfix">
