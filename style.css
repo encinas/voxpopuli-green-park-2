@@ -2,7 +2,7 @@
 Theme Name: Voxpopuli Green Park 2
 Theme URI: https://github.com/encinas/voxpopuli-green-park-2
 Description: Lightweight fast-rendering theme with 2-3 column layout and right sidebar, Widget-ready (4 slots), built-in support for plugins (e.g. twitter), support for threaded/nested comments, fully localized, easy to customize via settings-page. By <a href="http://cordobo.com">Andreas Jacob</a>.
-Version: 0.0.1
+Version: 0.0.2
 Author: David Encinas - based on work from Andreas Jacob
 Author URI: http://cordobo.com/
 Tags: green, white, silver, black, light, two-columns, right-sidebar, fixed-width
@@ -225,6 +225,8 @@ td#next { text-align: right; }
   overflow: hidden;
   padding: 19px 0 0;
 }
+
+.single { margin: 0 0 0 0; }
 
 #sidebar {
   background-color: #fff;
