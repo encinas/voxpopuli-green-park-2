@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-	<div id="container" class="single">
-		<div id="content" class="single">
+	<div id="container">
+		<div id="content">
 
   		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     		<div class="hentry post" id="post-<?php the_ID(); ?>">

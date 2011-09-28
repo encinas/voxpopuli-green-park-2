@@ -217,16 +217,15 @@ td#next { text-align: right; }
 
 #header { height: 146px; margin-top: 10px; position: relative; }
 
-#container { float: left; margin: 0 -350px 0 0; width: 100%; }
+#container { float: left; width: 100%; }
 
 #content {
-  border-right: 3px solid #D5DADD;
-  margin: 0 350px 0 0;
   overflow: hidden;
   padding: 19px 0 0;
 }
 
-.single { margin: 0 0 0 0; }
+.content-2c { border-right: 3px solid #D5DADD; margin: 0 350px 0 0; }
+.container-2c { margin: 0 -350px 0 0;  }
 
 #sidebar {
   background-color: #fff;
