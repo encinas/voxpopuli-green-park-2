@@ -7,6 +7,8 @@ function theme_init(){
 	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'voxpopuli' ) );
+	register_nav_menu( 'footer', __( 'Footer Menu', 'voxpopuli' ) );
+	
 }
 add_action ('init', 'theme_init');
 
@@ -316,11 +318,11 @@ function greenpark2_footer() { ?>
   <a href="#home" class="top-link"><?php _e('Back to Top', 'default'); ?></a>
 </p>
 
-<p>
-	&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?>
+<p>&copy; <?php echo date("Y"); ?> <?php bloginfo('name'); ?> </p>
+<?php wp_nav_menu( array( 'theme_location' => 'footer', 'container' => 'span', 'depth' => 1 ) ); ?>
+<br/>
 <p class="signet">
   <?php _e('Valid XHTML 1.0 Transitional | Valid CSS 3', 'default'); ?>
-  <br /><br />
 	<img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo-cgp2.png" alt="Cordobo Green Park 2 logo" title="Cordobo Green Park 2" width="75" height="12" />
 </p>
 
